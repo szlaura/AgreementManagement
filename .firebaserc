@@ -7,5 +7,8 @@
         ]
       }
     }
+  },
+  "projects": {
+    "default": "agreementmanagement-ab98a"
   }
 }
