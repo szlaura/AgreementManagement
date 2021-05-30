@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+    <button mat-stroked-button class="list-btn" (click)="get()"> Asc</button>
+    <button mat-stroked-button class="list-btn" (click)="getdescid()"> Desc</button>
+    <button mat-stroked-button class="list-btn" (click)="gatstartat()"> Agreement </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<app-container classes="container-1 flex">
+  <app-agreement-card class="item" *ngFor="let item of list | async" [agreement]="item" (getAgreement)="onGetAgreement($event)"></app-agreement-card>
+  <br>
+</app-container>
+
+<button mat-fab class="action-btn" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>
+

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+  <a mat-button [routerLink]="[ '/' ]">Agreements</a>
+<span style="flex: 1 1;"></span>
+<button mat-button style="float: right;" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let item of categories" [routerLink]="[ item.url ]"> <mat-icon>{{item.icon}}</mat-icon>
+    {{item.title}}&nbsp;</button>
+  <button mat-menu-item (click)="logout()"><mat-icon>arrow_back</mat-icon>
+    <span>Log out</span></button>
+</mat-menu>
+</mat-toolbar-row>
+</mat-toolbar>

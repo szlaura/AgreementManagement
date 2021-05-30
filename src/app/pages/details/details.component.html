@@ -1,0 +1,89 @@
+<mat-card *ngIf="inData | async as item">
+  <div style="display: flex;">
+    <span style="flex: 1 1;"></span>
+    <button mat-button (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <span style="flex: 1 1;"></span>
+  <div class="det-title">
+    <h1>{{item.name}}</h1>
+    <span></span>
+    <button mat-raised-button style="margin-right: 20px;" color="primary" (click)="remove()">Delete</button>
+    <button mat-raised-button color="accent" (click)="openEdit()">Edit</button>
+  </div>
+</mat-card>
+<table *ngIf="inData | async as item" class="mat">
+  <tr>
+      <td>Authorization </td>
+      <td>{{item.agreementAuthorization}} </td>
+  </tr>
+  <tr>
+    <td>Item</td>
+    <td>{{item.agreementItem}}</td>
+  </tr>
+  <tr>
+    <td>Period</td>
+    <td>{{item.agreementPeriod}}</td>
+  </tr>
+  <tr>
+    <td>Specification</td>
+    <td>{{item.agreementSpecification}}</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>{{item.agreementType}}</td>
+  </tr>
+  <tr>
+    <td>Associated</td>
+    <td>{{item.associatedAgreement}}</td>
+  </tr>
+  <tr>
+    <td>Characteristic</td>
+    <td>{{item.characteristic}}</td>
+  </tr>
+  <tr>
+    <td>Comletion Date</td>
+    <td>{{item.completionDate}}</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{{item.description}}</td>
+  </tr>
+  <tr>
+    <td>Document Number</td>
+    <td>{{item.documentNumber}}</td>
+  </tr>
+  <tr>
+    <td>Engaged Party</td>
+    <td>{{item.engagedParty}}</td>
+  </tr>
+  <tr>
+    <td>Href</td>
+    <td>{{item.href}}</td>
+  </tr>
+  <tr>
+    <td>Id</td>
+    <td>{{item.id}}</td>
+  </tr>
+  <tr>
+    <td>Initial Date</td>
+    <td>{{item.initialDate}}</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>{{item.name}}</td>
+  </tr>
+  <tr>
+    <td>Statement Of Intent</td>
+    <td>{{item.statementOfIntent}}</td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>{{item.status}}</td>
+  </tr>
+  <tr>
+    <td>Version</td>
+    <td>{{item.version}}</td>
+  </tr>
+</table>

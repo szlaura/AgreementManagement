@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "agreementmanagement-ab98a": {
+      "hosting": {
+        "AgreementManagement": [
+          "agreementmanagement-ab98a"
+        ]
+      }
+    }
+  }
+}

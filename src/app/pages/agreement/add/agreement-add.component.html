@@ -1,0 +1,244 @@
+<app-container *ngIf="form" [formGroup]="form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Authorization</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <table cellspacing="0" formArrayName="agreementAuthorization" >
+            <tr>
+              <td formGroupName="0">
+                <mat-form-field>
+                  <mat-label>Signature</mat-label>
+                  <input type="text" name="signatureRepresentation" matInput formControlName="signatureRepresentation">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Item</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Item</mat-label>
+            <input type="text" name="item" matInput formArrayName="agreementItem" required>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Period</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Period</mat-label>
+            <input type="text" name="agreementPeriod" matInput formControlName="agreementPeriod">
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Specification</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <table cellspacing="0" formArrayName="agreementSpecification" >
+            <tr>
+              <td formGroupName="0">
+                <mat-form-field>
+                  <mat-label>Specification</mat-label>
+                  <input type="text" name="description" matInput formControlName="description">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Type</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input type="text" name="agreementType" matInput formControlName="agreementType">
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Associated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <table cellspacing="0" formArrayName="associatedAgreement" >
+            <tr>
+              <td formGroupName="0">
+                <mat-form-field>
+                  <mat-label>Href</mat-label>
+                  <input type="text" name="href" matInput formControlName="href">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table></mat-list-item></mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Characteristic</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <table cellspacing="0" formArrayName="characteristic" >
+            <tr>
+              <td formGroupName="0">
+                <mat-form-field>
+                  <mat-label>Name</mat-label>
+                  <input type="text" name="name" matInput formControlName="name">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table></mat-list-item></mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Completion Date</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="completionDate">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Description</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input type="text" name="description" matInput formControlName="description">
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agreement Document Number</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <mat-label>Document Number</mat-label>
+            <input type="text" name="documentNumber" matInput formControlName="documentNumber">
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Engaged Party</mat-card-title></mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <table cellspacing="0" formArrayName="engagedParty" >
+            <tr>
+              <td formGroupName="0">
+                <mat-form-field>
+                  <mat-label>Engaged Party</mat-label>
+                  <input type="text" name="role" matInput formControlName="role" required>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Href</mat-card-title></mat-card-header>
+    <mat-card-content><mat-list><mat-list-item><mat-form-field>
+            <mat-label>Href</mat-label>
+            <input type="text" name="href" matInput formControlName="href">
+          </mat-form-field></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Id</mat-card-title></mat-card-header>
+    <mat-card-content>
+      <mat-list><mat-list-item><mat-form-field>
+            <mat-label>Identifier</mat-label>
+            <input type="text" name="id" matInput formControlName="id">
+        </mat-form-field></mat-list-item></mat-list></mat-card-content></mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Initial Date</mat-card-title></mat-card-header>
+    <mat-card-content><mat-list><mat-list-item>
+          <mat-label> Initial Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="initialDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+        </mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Name</mat-card-title></mat-card-header>
+    <mat-card-content><mat-list><mat-list-item><mat-form-field>
+            <mat-label>Name</mat-label>
+            <input type="text" name="name" matInput formControlName="name">
+          </mat-form-field></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement Statement Of Intent</mat-card-title></mat-card-header>
+    <mat-card-content><mat-list><mat-list-item><mat-form-field>
+            <mat-label>Statement Of Intent </mat-label>
+            <input type="text" name="statementOfIntent" matInput formControlName="statementOfIntent">
+          </mat-form-field></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement status</mat-card-title></mat-card-header>
+    <mat-card-content><mat-list><mat-list-item><mat-form-field>
+            <mat-label>Status</mat-label>
+            <input type="text" name="status" matInput formControlName="status">
+          </mat-form-field></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header><mat-card-title>Agreement version</mat-card-title> </mat-card-header>
+    <mat-card-content><mat-list><mat-list-item><mat-form-field>
+            <mat-label>Version</mat-label>
+            <input type="text" name="version" matInput formControlName="version">
+          </mat-form-field></mat-list-item></mat-list></mat-card-content>
+  </mat-card>
+  <div style="display: flex; justify-content: flex-end;">
+    <button mat-button (click)="dialogRef.close()" class="margin-right">CANCEL</button>
+    <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">ADD</button></div>
+</app-container>

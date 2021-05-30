@@ -1,0 +1,9 @@
+<mat-card *ngIf="agreement" (click)="getAgreement.emit(agreement)" appOnHover>
+  <mat-card-header>
+    <mat-card-title>{{agreement.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{agreement.description}}</p>
+  </mat-card-content>
+</mat-card>
+
